@@ -19,5 +19,6 @@
         </whitelist>
     </filter>
     <php>
+        <env name="GOOGLE_SERVICE_API_KEY" value="your-key-goes-here-for-testing"/>
     </php>
 </phpunit>
