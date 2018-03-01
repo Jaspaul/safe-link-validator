@@ -1,15 +1,19 @@
 language: php
 
 php:
-    - 7.1
-    - 7.2
+  - 7.1
+  - 7.2
 
 before_script: composer install
 
 script:
-    - vendor/bin/phpunit
+  - vendor/bin/phpunit
 
 after_script:
-    - mkdir -p build/logs
-    - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-    - php vendor/bin/php-coveralls -v
+  - mkdir -p build/logs
+  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+  - php vendor/bin/php-coveralls -v
+
+env:
+  matrix:
+    secure: jHk9tEcAxz9GHjoh4fnCEqYpmg7jPEortPDEoqoj2duzkzNd4sKfTAh685akON0M2Rh4djV5YmICd3ygduT7T5ESqcXCceEtPzTLtynxIX4WpTcM56y507Sh2JofWQmTTomxCVpGlXSo4eO3H5/xkEftALWgoNSoVdctXmx7f7hOuQo/+hMSA07m3swwSU/5eXHvcX/Vauw95TkfnbuSMUsZ6ri15o9UgUGxNyWLJ64hwB0/8tKkqnVMvt4C+Gb70thhstvk1QXr2TVBBXIz0djwvaUtLLqdDZWuq3A5ef3/GQhHIDJLLoJSCCGYufM6/4BKgdie5ReYUVJgZDGOFz1FibOoM243NECz4QbuF721MxruPo4EdScKEVT254TNYTZKj+8k/+SLhaItx3NJzfkmvTD02vBEnTxQ1+rhwNznEPoLK7ratZYgqlQS0qkOrJIH+AbK3Ced6//0c4iGSh+Gq0trGSRZQJclRbFyLB6Vz4Eu+oG5WMBCuXV4CetDkIA1ScyRNdNiWS0q2rHn9SHaYnvzJuIS8dUthKU8TzGpvMGFPhphMnLalc7z924PY1zxI7UO7yOWAWSXWir5W5ftq/KxG/PgLo2bstBXQPFbHgSZcmcWy3CCSCXnYw/jjhDLTuTohh0QTNZowb7qjpZ+qHoZTBL+v1IT5R2jYdc=
